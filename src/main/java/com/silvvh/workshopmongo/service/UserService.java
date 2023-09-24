@@ -17,4 +17,9 @@ public class UserService {
     public List<User> findAll() {
         return repository.findAll();
     }
+
+    public User findById(String id) {
+        Optional<User> userOptional = repository.findById(id);
+        return userOptional.orElseThrow(() -> new ObjectNotFoundException("Object not found"));
+    }
 }
