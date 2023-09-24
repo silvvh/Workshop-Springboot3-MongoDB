@@ -1,6 +1,7 @@
 package com.silvvh.workshopmongo.resources;
 
 import com.fasterxml.jackson.databind.annotation.JsonAppend;
+import com.silvvh.workshopmongo.domain.Post;
 import com.silvvh.workshopmongo.domain.User;
 import com.silvvh.workshopmongo.service.UserService;
 import dto.UserDTO;
@@ -29,6 +30,12 @@ public class UserResource {
     public ResponseEntity<UserDTO> findById(@PathVariable String id) {
     UserDTO userDTO = new UserDTO(service.findById(id));
     return ResponseEntity.ok().body(userDTO);
+    }
+
+    @GetMapping(value = "/{id}/posts")
+    public ResponseEntity<List<Post>> findPosts(@PathVariable String id) {
+        User user = service.findById(id);
+        return ResponseEntity.ok().body(user.getPosts());
     }
 
     @PostMapping
