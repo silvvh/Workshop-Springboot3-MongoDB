@@ -1,7 +1,5 @@
 # Workshop-Springboot-MongoDB
 
-# Workshop-Springboot
-
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/silvvh/Workshop-Springboot3-MongoDB/blob/main/LICENSE)
 
 # Sobre o projeto:
