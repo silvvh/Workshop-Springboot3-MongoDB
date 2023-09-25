@@ -5,7 +5,7 @@
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/silvvh/Workshop-Springboot3-MongoDB/blob/main/LICENSE)
 
 # Sobre o projeto:
-[https://workshop-springboot3-jpa-production-f924.up.railway.app](https://workshop-springboot3-mongodb-production.up.railway.app/)
+[https://workshop-springboot3-mongodb-production-f924.up.railway.app](https://workshop-springboot3-mongodb-production.up.railway.app/)
 
 O projeto é uma demonstração do uso do framework Spring Boot para implementar uma API REST no contexto simplificado de uma rede social.
 Utilizando os princípios da arquitetura REST, a aplicação oferece operações de criação, leitura, atualização e exclusão (CRUD).
