@@ -1,15 +1,16 @@
 package com.silvvh.workshopmongo.resources;
 
 import com.silvvh.workshopmongo.domain.Post;
+import com.silvvh.workshopmongo.resources.util.URL;
 import com.silvvh.workshopmongo.service.PostService;
 import dto.CommentDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -33,5 +34,11 @@ public class PostResource {
     public ResponseEntity<List<CommentDTO>> findPosts(@PathVariable String id) {
         Post post = service.findById(id);
         return ResponseEntity.ok().body(post.getComments());
+    }
+
+    @GetMapping(value="/titlesearch")
+    public ResponseEntity<List<Post>> findByTitle(@RequestParam(value = "text", defaultValue = "") String text) {
+        URL.decodeParam(text);
+        return ResponseEntity.ok().body(service.findByTitle(text));
     }
 }

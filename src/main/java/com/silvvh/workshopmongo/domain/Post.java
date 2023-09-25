@@ -6,8 +6,6 @@ import dto.CommentDTO;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Language;
-
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -39,7 +37,6 @@ public class Post implements Serializable {
         this.body = body;
         this.author = author;
     }
-
     public String getId() {
         return id;
     }
@@ -76,8 +73,8 @@ public class Post implements Serializable {
         return comments;
     }
 
-    public String getUser() {
-        return author.getName();
+    public AuthorDTO getUser() {
+        return author;
     }
 
     public void setUser(AuthorDTO author) {
