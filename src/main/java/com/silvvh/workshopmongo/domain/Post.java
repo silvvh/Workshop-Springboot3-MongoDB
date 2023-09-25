@@ -2,12 +2,17 @@ package com.silvvh.workshopmongo.domain;
 
 
 import dto.AuthorDTO;
+import dto.CommentDTO;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Language;
 
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Document
@@ -21,6 +26,8 @@ public class Post implements Serializable {
     private String body;
 
     private AuthorDTO author;
+    @Lazy
+    private List<CommentDTO> comments = new ArrayList<>();
 
     public Post() {
     }
@@ -63,6 +70,10 @@ public class Post implements Serializable {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    public List<CommentDTO> getComments() {
+        return comments;
     }
 
     public String getUser() {
