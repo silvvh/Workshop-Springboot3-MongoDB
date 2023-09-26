@@ -21,7 +21,7 @@ Utilizando os princípios da arquitetura REST, a aplicação oferece operações
 ![image](https://github.com/silvvh/Workshop-Springboot3-MongoDB/assets/116448381/1c502a8d-2329-4fb2-a8cf-17b2df747da1)
 
 ## Atualizar usuário:
-![image](https://github.com/silvvh/Workshop-Springboot3-MongoDB/assets/116448381/4dd9f0d8-9829-4b2b-9281-36b94e028200)
+![image](https://github.com/silvvh/Workshop-Springboot3-MongoDB/assets/116448381/3c3ad950-ae06-442d-9d6c-948a6762405b)
 
 ## Retornar posts de um usuário:
 ![image](https://github.com/silvvh/Workshop-Springboot3-MongoDB/assets/116448381/34f5bb0c-dd8f-4116-81a6-d193ea1750fa)
